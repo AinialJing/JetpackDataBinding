@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import
+            alias="User"
+            type="com.anniljing.jetpackviewmodel.model.User" />
+
+        <variable
+            name="user"
+            type="User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.NormalActivity">
+
+        <TextView
+            android:id="@+id/normalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/normalLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@{Integer.toString(user.like)}"
+            app:layout_constraintLeft_toRightOf="@id/normalName"
+            app:layout_constraintTop_toTopOf="@id/normalName" />
+
+        <Button
+            android:id="@+id/addLikeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addLike"
+            android:text="Like"
+            app:layout_constraintLeft_toLeftOf="@id/normalName"
+            app:layout_constraintTop_toBottomOf="@id/normalName" />
+
+        <TextView
+            android:id="@+id/currentLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/addLikeBtn"
+            app:layout_constraintTop_toBottomOf="@id/addLikeBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

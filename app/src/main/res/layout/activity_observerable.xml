@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data >
+
+        <import type="com.anniljing.jetpackviewmodel.R" />
+
+        <variable
+            name="user"
+            type="com.anniljing.jetpackviewmodel.model.ObservableUser" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ObservableActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@{user.like > 4 ? R.drawable.ic_person_black_96dp : R.drawable.ic_whatshot_black_96dp }"
+            app:tint="@{user.like > 9 ? @color/star : @android:color/black}" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/showLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="@id/imageView"
+            android:layout_marginLeft="20dp"
+            android:text="@{Integer.toString(user.like)}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/showLike"
+            android:hint="@{user.firstName}"
+            android:textColorHint="@{user.like > 4 ? @color/star : @android:color/black}"/>
+        <Button
+            android:id="@+id/addLikeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onLike"
+            android:text="Like"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
