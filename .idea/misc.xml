@@ -4,10 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/AndroidStudio/Project/JetPackViewModel/app/src/main/res/drawable-v24/ic_whatshot_black_96dp.xml" value="0.329" />
-<<<<<<< HEAD
-=======
+        <entry key="..\:/Android/AndroidStudio/Project/JetPackViewModel/app/src/main/res/layout/activity_double_binding_custom.xml" value="0.1390625" />
         <entry key="..\:/Android/AndroidStudio/Project/JetPackViewModel/app/src/main/res/layout/activity_double_binding_normal.xml" value="0.1390625" />
->>>>>>> branch2
         <entry key="..\:/Android/AndroidStudio/Project/JetPackViewModel/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android/AndroidStudio/Project/JetPackViewModel/app/src/main/res/layout/activity_normal.xml" value="0.21302083333333333" />
         <entry key="..\:/Android/AndroidStudio/Project/JetPackViewModel/app/src/main/res/layout/activity_observable_binding_adapter.xml" value="0.29981884057971014" />
