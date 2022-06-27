@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/share_data_between_fragments_graph"
+    app:startDestination="@id/shareFragmentOne">
+
+    <fragment
+        android:id="@+id/shareFragmentOne"
+        android:name="com.anniljing.jetpackviewmodel.fragment.ShareFragmentOne"
+        android:label="ShareFragmentOne" >
+        <action
+            android:id="@+id/action_shareFragmentOne_to_shareFragmentTwo"
+            app:destination="@id/shareFragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareFragmentTwo"
+        android:name="com.anniljing.jetpackviewmodel.fragment.ShareFragmentTwo"
+        android:label="ShareFragmentTwo" />
+</navigation>

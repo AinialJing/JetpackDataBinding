@@ -35,6 +35,8 @@
         <activity android:name=".activity.ObservableBindingAdapterActivity" />
         <activity android:name=".activity.DoubleBindingCustomActivity" />
         <activity android:name=".activity.DoubleBindingNormalActivity" />
+        <activity android:name=".activity.DateAndWeatherActivity" />
+        <activity android:name=".activity.ShareDataBetweenFragmentsActivity" />
     </application>
 
 </manifest>

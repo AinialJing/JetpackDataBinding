@@ -27,4 +27,12 @@ class MainActivity : AppCompatActivity() {
     fun jumpToLiveData(view: View) {
         startActivity(Intent(this, ViewModelActivity::class.java))
     }
+
+    fun jumpToLiveDataAndViewModel(view: View) {
+        startActivity(Intent(this, DateAndWeatherActivity::class.java))
+    }
+
+    fun jumpToShareActivity(view: View) {
+        startActivity(Intent(this, ShareDataBetweenFragmentsActivity::class.java))
+    }
 }
