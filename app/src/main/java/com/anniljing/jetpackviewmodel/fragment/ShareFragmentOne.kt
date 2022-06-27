@@ -13,6 +13,9 @@ import com.anniljing.jetpackviewmodel.databinding.FragmentShareDateOneBinding
 import com.anniljing.jetpackviewmodel.model.Item
 import com.anniljing.jetpackviewmodel.model.SharedViewModel
 
+/**
+ * 使用activityViewModels代理 初始化共享的数据对象
+ */
 class ShareFragmentOne : Fragment() {
     private lateinit var binding: FragmentShareDateOneBinding
     private val model: SharedViewModel by activityViewModels()
